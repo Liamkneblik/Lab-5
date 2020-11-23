@@ -27,6 +27,7 @@ function createCourseArray(){
 }
 
 function findCourse(courseList){
+    let status = false
     let input
     do{
         input = prompt('Enter a course number')
@@ -36,11 +37,18 @@ function findCourse(courseList){
             if (course.code.innerHTML.includes(input)){
                 let f = course.code
                 f.style.background = "lightgreen"
+                status = true
             }
+        }
+        if((!course.code.innerHTML.includes(input)) && (status === false)){
+                let newcourseCode = document.createElement('p')
+                let text1 = document.createTextNode(`${input} - 'N/A' - Fall 2020`)
+                newcourseCode.appendChild(text1)
+                let element = document.querySelector('section')
+                element.appendChild(newcourseCode)
         }
     }
 }
-
 
 courseList = createCourseArray()
 console.log(courseList)
