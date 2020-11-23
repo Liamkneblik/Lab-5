@@ -20,7 +20,7 @@ let status = false;
 do{
     input = prompt('Enter a course number')
 }
-while(parseInt(input) == true){
+while(!Number(input)){
     for (course of courseList){
         if (course.code.includes(input)){
             console.log(`Yes I am taking the course: ${course.code} - ${course.name}`)
