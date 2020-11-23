@@ -21,21 +21,14 @@ section ul {
 section li{
     padding: 0.5em 0em 1em 0em;
 }
+section li a{
+    background-color: none;
+}
 section .list2, .list3 {
     border-top: 1px solid rgb(99, 99, 99);
     
 }
 @media screen and (min-width: 600px){
-    body{
-        background-color: beige;
-        
-    }
-    nav{
-        display: flex;
-        justify-content: center;
-        background-color: lightblue;
-
-    }
     nav > ul{
         list-style: none;
         display: flex;
